@@ -26,7 +26,7 @@
 
 `1.  Зарегистрируйте аккаунт на [GitHub](https://github.com/)`
 <details>
-`![1.1](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/img/1.1.png?raw=true)`
+![1.1](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/img/1.1.png?raw=true "1.1")
 </details>
 1. `Заполните здесь этапы выполнения, если требуется ....`
 2. `Заполните здесь этапы выполнения, если требуется ....`
