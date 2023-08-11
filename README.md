@@ -24,12 +24,17 @@
 
 ### Задание 1
 
+<<<<<<< HEAD
 `1.  Зарегистрируйте аккаунт на [GitHub](https://github.com/)`
 <details>
 
 ![1-1](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/img/1.1.png)
 
 </details>
+=======
+1.  Зарегистрируйте аккаунт на [GitHub](https://github.com/)
+![01](https://raw.githubusercontent.com/RaffaelX/sys-gitlab-hw/main/img/1.1.png)
+>>>>>>> ed9a1a42ba66528f6cb1aabae2c977ffc9721217
 1. `Заполните здесь этапы выполнения, если требуется ....`
 2. `Заполните здесь этапы выполнения, если требуется ....`
 3. `Заполните здесь этапы выполнения, если требуется ....`
