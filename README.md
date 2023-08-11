@@ -26,7 +26,7 @@
 
 `1.  Зарегистрируйте аккаунт на [GitHub](https://github.com/)`
 <details>
-![1-1](https://raw.githubusercontent.com/RaffaelX/sys-gitlab-hw/main/img/1.1.png)
+![01](https://github.com/Ivashka80/Netology/assets/121082757/8b775232-df62-4189-8658-cd11bc208522)
 </details>
 1. `Заполните здесь этапы выполнения, если требуется ....`
 2. `Заполните здесь этапы выполнения, если требуется ....`
