@@ -28,16 +28,107 @@
 
  <details>
 
-![01](https://raw.githubusercontent.com/RaffaelX/sys-gitlab-hw/main/img/1.1.png "01")
+![1-01](https://raw.githubusercontent.com/RaffaelX/sys-gitlab-hw/main/img/1.1.png)
 
  </details>
 
-2. `Заполните здесь этапы выполнения, если требуется ....`
-2. `Заполните здесь этапы выполнения, если требуется ....`
-3. `Заполните здесь этапы выполнения, если требуется ....`
-4. `Заполните здесь этапы выполнения, если требуется ....`
-5. `Заполните здесь этапы выполнения, если требуется ....`
-6. 
+2. Создайте новый отдельный публичный репозиторий. Обязательно поставьте галочку в поле «Initialize this repository with a README».
+
+<details>
+
+![1-02](https://raw.githubusercontent.com/RaffaelX/sys-gitlab-hw/main/img/1.2.png)
+
+</details>
+
+
+3. Склонируйте репозиторий, используя https протокол git clone .…
+
+<details>
+
+![1-03](https://raw.githubusercontent.com/RaffaelX/sys-gitlab-hw/main/img/1.3.png)
+
+</details>
+
+4. Перейдите в каталог с клоном репозитория.
+
+<details>
+
+![1-04](https://raw.githubusercontent.com/RaffaelX/sys-gitlab-hw/main/img/1.4.png "1-04")
+
+</details>
+
+5. Произведите первоначальную настройку Git, указав своё настоящее имя и email: git config --global user.name и git config --global user.email johndoe@example.com.
+
+<details>
+
+![1-05](https://raw.githubusercontent.com/RaffaelX/sys-gitlab-hw/main/img/1.5.png)
+
+</details>
+
+6. Выполните команду git status и запомните результат.
+
+<details>
+
+![1-06](https://raw.githubusercontent.com/RaffaelX/sys-gitlab-hw/main/img/1.6.png)
+
+</details>
+
+
+7. Отредактируйте файл README.md любым удобным способом, переведя файл в состояние Modified.
+
+<details>
+
+![1-07](https://raw.githubusercontent.com/RaffaelX/sys-gitlab-hw/main/img/1.7.png)
+
+</details>
+
+8. Ещё раз выполните git status и продолжайте проверять вывод этой команды после каждого следующего шага.
+
+<details>
+
+![1-08](https://raw.githubusercontent.com/RaffaelX/sys-gitlab-hw/main/img/1.8.png)
+
+</details>
+
+9. Посмотрите изменения в файле README.md, выполнив команды git diff и git diff --staged.
+
+<details>
+
+![1-09](https://raw.githubusercontent.com/RaffaelX/sys-gitlab-hw/main/img/1.9.png)
+
+</details>
+
+10. Переведите файл в состояние staged или, как говорят, добавьте файл в коммит, командой git add README.md.
+
+<details>
+
+![1-10](https://raw.githubusercontent.com/RaffaelX/sys-gitlab-hw/main/img/1.10.png)
+
+</details>
+
+11. Ещё раз выполните команды git diff и git diff --staged.
+
+<details>
+
+![1-11](https://raw.githubusercontent.com/RaffaelX/sys-gitlab-hw/main/img/1.11.png)
+
+</details>
+
+12. Теперь можно сделать коммит git commit -m 'First commit'.
+
+<details>
+
+![1-12](https://raw.githubusercontent.com/RaffaelX/sys-gitlab-hw/main/img/1.12.png)
+
+</details>
+
+13. Сделайте git push origin master.
+
+<details>
+
+![1-13](https://raw.githubusercontent.com/RaffaelX/sys-gitlab-hw/main/img/1.13.png)
+
+</details>
 
 ```
 Поле для вставки кода...
