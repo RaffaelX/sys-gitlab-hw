@@ -160,7 +160,7 @@
 </details>
 
 В качестве ответа добавьте ссылку на этот коммит в ваш md-файл с решением.
-[Ссылка](https://github.com/RaffaelX/sys-gitlab-hw/commit/fb6571a9e85fe9e81910350ff78b59bbe70b2f56)
+[Ссылка](https://github.com/RaffaelX/gitlab-RaffaelX/commit/866b3d73bb1f68e975edc7851ff8f277adeed3d7)
 
 ### Задание 3
 
