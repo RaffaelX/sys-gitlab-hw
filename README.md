@@ -24,7 +24,7 @@
 
 ### Задание 1
 
-`1.  Зарегистрируйте аккаунт на [GitHub](https://github.com/)`
+1.  Зарегистрируйте аккаунт на [GitHub](https://github.com/)
 <details>
 ![01](https://raw.githubusercontent.com/RaffaelX/sys-gitlab-hw/main/img/1.1.png)
 </details>
