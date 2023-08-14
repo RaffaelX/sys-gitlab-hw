@@ -71,7 +71,7 @@
  </details>
 
 <details>
-s
+
 ![1-03](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/img/Netology_monitoring3.PNG)
 
  </details>
