@@ -60,6 +60,18 @@
 
 <details>
 
-![1-01]()
+![1-01](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/img/Netology_monitoring1.PNG)
+
+ </details>
+ 
+ <details>
+
+![1-02](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/img/Netology_monitoring2.PNG)
+
+ </details>
+
+<details>
+s
+![1-03](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/img/Netology_monitoring3.PNG)
 
  </details>
