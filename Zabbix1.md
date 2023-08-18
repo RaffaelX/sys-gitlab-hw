@@ -31,11 +31,31 @@
 
 <details>
 
-![Image not found: https://github.com/RaffaelX/sys-gitlab-hw/blob/main/img/Zabbix1_1-02(1](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/img/Zabbix1_1-02(1 "Image not found: https://github.com/RaffaelX/sys-gitlab-hw/blob/main/img/Zabbix1_1-02(1").PNG)
+![1-02_1](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/img/Zabbix1_1-02_1.PNG)
 
-![1-02](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/img/Zabbix1_1-02(2).PNG)
+![1-02_2](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/img/Zabbix1_1-02_2.PNG)
 
-![1-022]()
+![1-02_3](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/img/Zabbix1_1-02_3.PNG)
+
+![1-02_4](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/img/Zabbix1_1-02_4.PNG)
+
+![1-02_5](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/img/Zabbix1_1-02_5.PNG)
+
+![1-02_6](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/img/Zabbix1_1-02_6.PNG)
+
+![1-02_7](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/img/Zabbix1_1-02_7.PNG)
+
+![1-03](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/img/Zabbix1_1-03.PNG)
+
+![1-03_1](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/img/Zabbix1_1-03_1.PNG)
+
+![1-03_2](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/img/Zabbix1_1-03_2.PNG)
+
+![1-03_3](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/img/Zabbix1_1-03_3.PNG)
+
+![1-03_4](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/img/Zabbix1_1-03_4.PNG)
+
+![1-03_5](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/img/Zabbix1_1-03_5.PNG)
 
 </details>
 
