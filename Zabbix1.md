@@ -22,7 +22,7 @@
 1. Установите PostgreSQL. Для установки достаточна та версия, что есть в системном репозитороии Debian 11.
 
 <detail>
-![1-01]()
+![1-01](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/img/Zabbix1_1-01.PNG)
 </detail>
 
 2. 
