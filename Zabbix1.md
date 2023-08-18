@@ -31,7 +31,11 @@
 
 <details>
 
-![1-02](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/img/Zabbix1_1-02(1).PNG)
+![Image not found: https://github.com/RaffaelX/sys-gitlab-hw/blob/main/img/Zabbix1_1-02(1](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/img/Zabbix1_1-02(1 "Image not found: https://github.com/RaffaelX/sys-gitlab-hw/blob/main/img/Zabbix1_1-02(1").PNG)
+
+![1-02](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/img/Zabbix1_1-02(2).PNG)
+
+![1-022]()
 
 </details>
 
