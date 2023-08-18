@@ -27,10 +27,15 @@
 
 </details>
 
-2. 
+2. Выполните все необходимые команды для установки Zabbix Server и Zabbix Web Server
+
+<details>
+
+![1-02](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/img/Zabbix1_1-02(1).PNG)
+
+</details>
 
 `При необходимости прикрепитe сюда скриншоты
-![Название скриншота 1](ссылка на скриншот 1)`
 
 
 ---
