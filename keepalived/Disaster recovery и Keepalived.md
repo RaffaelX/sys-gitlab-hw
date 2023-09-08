@@ -46,7 +46,15 @@
 
 <details>
 
+![Keepalived1-01](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/keepalived/img/Disaster%20Recovery.%20FHRP%20и%20Keepalived_1.PNG)
 
+![Keepalived1-02](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/keepalived/img/Disaster%20Recovery.%20FHRP%20и%20Keepalived_2.PNG)
+
+![Keepalived1-03](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/keepalived/img/Disaster%20Recovery.%20FHRP%20и%20Keepalived_3.PNG)
+
+![Keepalived1-04](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/keepalived/img/Disaster%20Recovery.%20FHRP%20и%20Keepalived_4.PNG)
+
+[Схема pkt](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/keepalived/hsrp_advanced.pkt "pkt файл") 
 
 </details>
 
