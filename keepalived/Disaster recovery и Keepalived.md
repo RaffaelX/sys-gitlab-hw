@@ -89,7 +89,7 @@
 #### keepalived.conf 
 
 <details>
-    ```bash
+```bash
 rrp_script check_nginx {
     script "/home/adminr/bash.sh"
     interval 3
@@ -107,19 +107,22 @@ vrrp_instance VI_1 {
     track_script {
         check_nginx
     }
-}```
+}
+```
 </details>
 
 #### bash.sh
 
 <details>
 
+```bash
 #!/bin/bash
 if [[ $(bash -c "</dev/tcp/localhost/80" && echo $?) ]] && [[ -f /var/www/html/>
         exit 0
 else
         sudo systemctl stop keepalived.service
 fi
+```
 
 </details>
 
