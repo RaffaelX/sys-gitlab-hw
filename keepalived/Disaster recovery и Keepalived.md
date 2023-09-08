@@ -72,7 +72,55 @@
 
 <details>
 
-[]()
+![2-01](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/keepalived/img/Disaster%20Recovery.%20FHRP%20и%20Keepalived_7.PNG)
+
+![Image not found: https://github.com/RaffaelX/sys-gitlab-hw/blob/main/keepalived/img/Disaster%20Recovery.%20FHRP%20и%20Keepalived_8.PNG](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/keepalived/img/Disaster%20Recovery.%20FHRP%20и%20Keepalived_8.PNG "Image not found: https://github.com/RaffaelX/sys-gitlab-hw/blob/main/keepalived/img/Disaster%20Recovery.%20FHRP%20и%20Keepalived_8.PNG")
+
+![2-03](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/keepalived/img/Disaster%20Recovery.%20FHRP%20и%20Keepalived_9.PNG)
+
+![2-04](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/keepalived/img/Disaster%20Recovery.%20FHRP%20и%20Keepalived_10.PNG)
+
+![2-05](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/keepalived/img/Disaster%20Recovery.%20FHRP%20и%20Keepalived_11.PNG)
+
+![2-06](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/keepalived/img/Disaster%20Recovery.%20FHRP%20и%20Keepalived_12.PNG)
+
+</details>
+
+#### keepalived.conf 
+
+<details>
+
+rrp_script check_nginx {
+    script "/home/adminr/bash.sh"
+    interval 3
+}
+
+vrrp_instance VI_1 {
+    state MASTER
+    interface enp0s8
+    virtual_router_id 15
+    priority 205
+    advert_int 1
+    virtual_ipaddress {
+        192.168.122.15/24
+    }
+    track_script {
+        check_nginx
+    }
+}
+
+</details>
+
+#### bash.sh
+
+<details>
+
+#!/bin/bash
+if [[ $(bash -c "</dev/tcp/localhost/80" && echo $?) ]] && [[ -f /var/www/html/>
+        exit 0
+else
+        sudo systemctl stop keepalived.service
+fi
 
 </details>
 
