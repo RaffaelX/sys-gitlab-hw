@@ -89,7 +89,7 @@
 #### keepalived.conf 
 
 <details>
-
+    ```bash
 rrp_script check_nginx {
     script "/home/adminr/bash.sh"
     interval 3
@@ -107,8 +107,7 @@ vrrp_instance VI_1 {
     track_script {
         check_nginx
     }
-}
-
+}```
 </details>
 
 #### bash.sh
