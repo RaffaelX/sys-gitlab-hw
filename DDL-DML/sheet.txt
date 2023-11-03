@@ -1,0 +1,48 @@
+nano docker-compose.yml
+
+version: "3.1"
+services:
+  mysql_db:
+    image: mysql:8.2
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456789
+      MYSQL_DATABASE: sys-22
+      MYSQL_USER: adminr123456789
+      MYSQL_PASSWORD: secret2
+    volumes:
+      - ./dbdata:/var/lib/mysql/
+
+docker compose up -d
+
+wget https://dev.mysql.com/get/mysql-apt-config_0.8.28-1_all.deb
+sudo dpkg -i mysql-apt-config_0.8.28-1_all.deb
+sudo apt update
+sudo apt install mysql-client
+sudo apt install mysql-shell
+mysqlsh
+\sql
+\connect root@localhost
+\status
+CREATE USER 'sys_temp'@'localhost' IDENTIFIED BY '123456789';
+SELECT user,authentication_string,plugin,host FROM mysql.user;
+\quit
+docker ps
+docker exec -it 4f4175dccf36 /bin/bash
+mysql -uroot -p123456789
+GRANT ALL PRIVILEGES ON *.* TO 'sys_temp'@'localhost';
+flush privileges;
+exit
+\connect sys_temp@localhost
+ALTER USER 'sys_temp'@'localhost' IDENTIFIED WITH mysql_native_password BY '12345';
+wget https://downloads.mysql.com/docs/sakila-db.zip
+unzip sakila-db.zip
+docker cp sakila-db/ 4f4175dccf36:/sakila-db
+mysql -u sys_temp -p ${DBNAME} </sakila-db/sakila-schema.sql
+mysql -u sys_temp -p ${DBNAME} </sakila-db/sakila-data.sql
+mysql -u sys_temp -p12345
+SHOW DATABASES;
+USE sakila;
+SHOW TABLES;
