@@ -1,0 +1,20 @@
+### master-1###
+
+docker exec -it master-1 bash
+mysql -p
+show master status\G;
+
+CREATE USER 'repl'@'%' IDENTIFIED WITH mysql_native_password BY 'slaverepl';
+GRANT REPLICATION SLAVE ON *.* TO 'repl'@'%';
+
+
+###slave-1###
+
+CHANGE MASTER TO
+MASTER_HOST='master-1',
+MASTER_USER='repl',
+MASTER_PASSWORD='slaverepl',
+MASTER_LOG_FILE='my-sql.000004',
+MASTER_LOG_POS=660;
+
+START SLAVE;
