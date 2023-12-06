@@ -1,0 +1,122 @@
+KhakimovRafael@debian:~$ sudo apt install ecryptfs-utils
+[sudo] password for KhakimovRafael: 
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+ecryptfs-utils is already the newest version (111-5).
+The following package was automatically installed and is no longer required:
+  libopengl0
+Use 'sudo apt autoremove' to remove it.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+KhakimovRafael@debian:~$ sudo ecryptfs-migrate-home -u cryptouser
+ERROR:  Cannot find the home directory of cryptouser.
+KhakimovRafael@debian:~$ sudo adduser cryptouser
+Adding user `cryptouser' ...
+Adding new group `cryptouser' (1003) ...
+Adding new user `cryptouser' (1004) with group `cryptouser' ...
+Creating home directory `/home/cryptouser' ...
+Copying files from `/etc/skel' ...
+New password: 
+Retype new password: 
+passwd: password updated successfully
+Changing the user information for cryptouser
+Enter the new value, or press ENTER for the default
+	Full Name []: Khakimov Rafael
+	Room Number []: 
+	Work Phone []: 
+	Home Phone []: 
+	Other []: 
+Is the information correct? [Y/n] y
+KhakimovRafael@debian:~$ sudo ecryptfs-migrate-home -u cryptouser
+ERROR:  Please install the rsync package.
+KhakimovRafael@debian:~$ whereis rsync
+rsync:
+KhakimovRafael@debian:~$ rsync
+bash: rsync: command not found
+KhakimovRafael@debian:~$ sudo apt install rsync
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following package was automatically installed and is no longer required:
+  libopengl0
+Use 'sudo apt autoremove' to remove it.
+The following NEW packages will be installed:
+  rsync
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 396 kB of archives.
+After this operation, 755 kB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian bullseye/main amd64 rsync amd64 3.2.3-4+deb11u1 [396 kB]
+Fetched 396 kB in 0s (1,075 kB/s)
+Selecting previously unselected package rsync.
+(Reading database ... 192084 files and directories currently installed.)
+Preparing to unpack .../rsync_3.2.3-4+deb11u1_amd64.deb ...
+Unpacking rsync (3.2.3-4+deb11u1) ...
+Setting up rsync (3.2.3-4+deb11u1) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/rsync.service > /lib/systemd/system/rsync.service.
+Processing triggers for man-db (2.9.4-2) ...
+KhakimovRafael@debian:~$ su - cryptouser
+Password: 
+cryptouser@debian:~$ ls -l
+total 0
+cryptouser@debian:~$ touch for_netology_home_work
+cryptouser@debian:~$ ls -la
+total 20
+drwxr-xr-x 2 cryptouser cryptouser 4096 Dec  6 11:22 .
+drwxr-xr-x 7 root       root       4096 Dec  6 11:18 ..
+-rw-r--r-- 1 cryptouser cryptouser  220 Dec  6 11:18 .bash_logout
+-rw-r--r-- 1 cryptouser cryptouser 3526 Dec  6 11:18 .bashrc
+-rw-r--r-- 1 cryptouser cryptouser    0 Dec  6 11:22 for_netology_home_work
+-rw-r--r-- 1 cryptouser cryptouser  807 Dec  6 11:18 .profile
+cryptouser@debian:~$ exit
+logout
+KhakimovRafael@debian:~$ sudo ecryptfs-migrate-home -u cryptouser
+INFO:  Checking disk space, this may take a few moments.  Please be patient.
+INFO:  Checking for open files in /home/cryptouser
+lsof: WARNING: can't stat() fuse.gvfsd-fuse file system /run/user/1000/gvfs
+      Output information may be incomplete.
+Enter your login passphrase [cryptouser]: 
+************************************************************************
+YOU SHOULD RECORD YOUR MOUNT PASSPHRASE AND STORE IT IN A SAFE LOCATION.
+  ecryptfs-unwrap-passphrase ~/.ecryptfs/wrapped-passphrase
+THIS WILL BE REQUIRED IF YOU NEED TO RECOVER YOUR DATA AT A LATER TIME.
+************************************************************************
+Done configuring.
+chown: cannot access '/dev/shm/.ecryptfs-cryptouser': No such file or directory
+INFO:  Encrypted home has been set up, encrypting files now...this may take a while.
+sending incremental file list
+./
+.bash_history
+             47 100%    0.00kB/s    0:00:00 (xfr#1, to-chk=4/6)
+.bash_logout
+            220 100%  214.84kB/s    0:00:00 (xfr#2, to-chk=3/6)
+.bashrc
+          3,526 100%    3.36MB/s    0:00:00 (xfr#3, to-chk=2/6)
+.profile
+            807 100%  788.09kB/s    0:00:00 (xfr#4, to-chk=1/6)
+for_netology_home_work
+              0 100%    0.00kB/s    0:00:00 (xfr#5, to-chk=0/6)
+Could not unlink the key(s) from your keying. Please use `keyctl unlink` if you wish to remove the key(s). Proceeding with umount.
+========================================================================
+Some Important Notes!
+ 1. The file encryption appears to have completed successfully, however,
+    cryptouser MUST LOGIN IMMEDIATELY, _BEFORE_THE_NEXT_REBOOT_,
+    TO COMPLETE THE MIGRATION!!!
+ 2. If cryptouser can log in and read and write their files, then the migration is complete,
+    and you should remove /home/cryptouser.rjiC8Ikt.
+    Otherwise, restore /home/cryptouser.rjiC8Ikt back to /home/cryptouser.
+ 3. cryptouser should also run 'ecryptfs-unwrap-passphrase' and record
+    their randomly generated mount passphrase as soon as possible.
+ 4. To ensure the integrity of all encrypted data on this system, you
+    should also encrypt swap space with 'ecryptfs-setup-swap'.
+========================================================================
+KhakimovRafael@debian:~$ sudo ls -l /home/cryptouser
+total 0
+lrwxrwxrwx 1 cryptouser cryptouser 56 Dec  6 11:22 Access-Your-Private-Data.desktop -> /usr/share/ecryptfs-utils/ecryptfs-mount-private.desktop
+lrwxrwxrwx 1 cryptouser cryptouser 52 Dec  6 11:22 README.txt -> /usr/share/ecryptfs-utils/ecryptfs-mount-private.txt
+KhakimovRafael@debian:~$ su - cryptouser 
+Password: 
+cryptouser@debian:~$ ls -l /home/cryptouser
+total 8
+-rw-r--r-- 1 cryptouser cryptouser 0 Dec  6 11:22 for_netology_home_work
+
+

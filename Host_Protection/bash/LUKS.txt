@@ -1,0 +1,211 @@
+KhakimovRafael@debian:~$ lsblk
+NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda      8:0    0   40G  0 disk 
+├─sda1   8:1    0  512M  0 part /boot/efi
+├─sda2   8:2    0 38.5G  0 part /
+└─sda3   8:3    0  976M  0 part [SWAP]
+sdb      8:16   0    5G  0 disk 
+sdc      8:32   0    5G  0 disk 
+sdd      8:48   0  100M  0 disk 
+sr0     11:0    1 1024M  0 rom  
+KhakimovRafael@debian:~$ sudo fdisk /dev/sdd
+[sudo] password for KhakimovRafael: 
+Welcome to fdisk (util-linux 2.36.1).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+Device does not contain a recognized partition table.
+Created a new DOS disklabel with disk identifier 0x4ea48e51.
+Command (m for help): n
+Partition type
+   p   primary (0 primary, 0 extended, 4 free)
+   e   extended (container for logical partitions)
+Select (default p): p
+Partition number (1-4, default 1): 
+First sector (2048-204799, default 2048): 
+Last sector, +/-sectors or +/-size{K,M,G,T,P} (2048-204799, default 204799): 
+Created a new partition 1 of type 'Linux' and of size 99 MiB.
+Command (m for help): p
+Disk /dev/sdd: 100 MiB, 104857600 bytes, 204800 sectors
+Disk model: VBOX HARDDISK   
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x4ea48e51
+Device     Boot Start    End Sectors Size Id Type
+/dev/sdd1        2048 204799  202752  99M 83 Linux
+Command (m for help): w
+The partition table has been altered.
+Calling ioctl() to re-read partition table.
+Syncing disks.
+KhakimovRafael@debian:~$ lsblk
+NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda      8:0    0   40G  0 disk 
+├─sda1   8:1    0  512M  0 part /boot/efi
+├─sda2   8:2    0 38.5G  0 part /
+└─sda3   8:3    0  976M  0 part [SWAP]
+sdb      8:16   0    5G  0 disk 
+sdc      8:32   0    5G  0 disk 
+sdd      8:48   0  100M  0 disk 
+└─sdd1   8:49   0   99M  0 part 
+sr0     11:0    1 1024M  0 rom  
+KhakimovRafael@debian:~$ sudo apt install gparted
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following package was automatically installed and is no longer required:
+  libopengl0
+Use 'sudo apt autoremove' to remove it.
+The following additional packages will be installed:
+  gparted-common
+Suggested packages:
+  dmraid gpart jfsutils kpartx mtools reiser4progs reiserfsprogs udftools
+The following NEW packages will be installed:
+  gparted gparted-common
+0 upgraded, 2 newly installed, 0 to remove and 0 not upgraded.
+Need to get 2,466 kB of archives.
+After this operation, 8,477 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://deb.debian.org/debian bullseye/main amd64 gparted-common all 1.2.0-1 [1,659 kB]
+Get:2 http://deb.debian.org/debian bullseye/main amd64 gparted amd64 1.2.0-1 [806 kB]
+Fetched 2,466 kB in 1s (4,055 kB/s)
+Selecting previously unselected package gparted-common.
+(Reading database ... 192118 files and directories currently installed.)
+Preparing to unpack .../gparted-common_1.2.0-1_all.deb ...
+Unpacking gparted-common (1.2.0-1) ...
+Selecting previously unselected package gparted.
+Preparing to unpack .../gparted_1.2.0-1_amd64.deb ...
+Unpacking gparted (1.2.0-1) ...
+Setting up gparted-common (1.2.0-1) ...
+Setting up gparted (1.2.0-1) ...
+Processing triggers for mailcap (3.69) ...
+Processing triggers for desktop-file-utils (0.26-1) ...
+Processing triggers for hicolor-icon-theme (0.17-2) ...
+Processing triggers for gnome-menus (3.36.0-1) ...
+Processing triggers for man-db (2.9.4-2) ...
+KhakimovRafael@debian:~$ sudo apt install cryptsetup
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following package was automatically installed and is no longer required:
+  libopengl0
+Use 'sudo apt autoremove' to remove it.
+The following additional packages will be installed:
+  cryptsetup-bin cryptsetup-initramfs cryptsetup-run
+The following NEW packages will be installed:
+  cryptsetup cryptsetup-bin cryptsetup-initramfs cryptsetup-run
+0 upgraded, 4 newly installed, 0 to remove and 0 not upgraded.
+Need to get 768 kB of archives.
+After this operation, 2,862 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://security.debian.org/debian-security bullseye-security/main amd64 cryptsetup-bin amd64 2:2.3.7-1+deb11u1 [413 kB]
+Get:2 http://security.debian.org/debian-security bullseye-security/main amd64 cryptsetup amd64 2:2.3.7-1+deb11u1 [228 kB]
+Get:3 http://security.debian.org/debian-security bullseye-security/main amd64 cryptsetup-initramfs all 2:2.3.7-1+deb11u1 [72.5 kB]
+Get:4 http://security.debian.org/debian-security bullseye-security/main amd64 cryptsetup-run all 2:2.3.7-1+deb11u1 [54.4 kB]
+Fetched 768 kB in 1s (1,156 kB/s)    
+Preconfiguring packages ...
+Selecting previously unselected package cryptsetup-bin.
+(Reading database ... 192272 files and directories currently installed.)
+Preparing to unpack .../cryptsetup-bin_2%3a2.3.7-1+deb11u1_amd64.deb ...
+Unpacking cryptsetup-bin (2:2.3.7-1+deb11u1) ...
+Selecting previously unselected package cryptsetup.
+Preparing to unpack .../cryptsetup_2%3a2.3.7-1+deb11u1_amd64.deb ...
+Unpacking cryptsetup (2:2.3.7-1+deb11u1) ...
+Selecting previously unselected package cryptsetup-initramfs.
+Preparing to unpack .../cryptsetup-initramfs_2%3a2.3.7-1+deb11u1_all.deb ...
+Unpacking cryptsetup-initramfs (2:2.3.7-1+deb11u1) ...
+Selecting previously unselected package cryptsetup-run.
+Preparing to unpack .../cryptsetup-run_2%3a2.3.7-1+deb11u1_all.deb ...
+Unpacking cryptsetup-run (2:2.3.7-1+deb11u1) ...
+Setting up cryptsetup-bin (2:2.3.7-1+deb11u1) ...
+Setting up cryptsetup (2:2.3.7-1+deb11u1) ...
+Setting up cryptsetup-run (2:2.3.7-1+deb11u1) ...
+Setting up cryptsetup-initramfs (2:2.3.7-1+deb11u1) ...
+update-initramfs: deferring update (trigger activated)
+Processing triggers for man-db (2.9.4-2) ...
+Processing triggers for initramfs-tools (0.140) ...
+update-initramfs: Generating /boot/initrd.img-5.10.0-26-amd64
+KhakimovRafael@debian:~$ cryptsetup --version
+bash: cryptsetup: command not found
+KhakimovRafael@debian:~$ cryptsetup --version
+bash: cryptsetup: command not found
+KhakimovRafael@debian:~$ sudo cryptsetup --version
+[sudo] password for KhakimovRafael: 
+KhakimovRafael@debian:~$ sudo cryptsetup -y -v --type luks2 luksFormat /dev/sdd1
+[sudo] password for KhakimovRafael: 
+WARNING!
+========
+This will overwrite data on /dev/sdd1 irrevocably.
+Are you sure? (Type 'yes' in capital letters): yes
+Operation aborted.
+Command failed with code -1 (wrong or missing parameters).
+KhakimovRafael@debian:~$ sudo cryptsetup -y -v --type luks2 luksFormat /dev/sdd1
+WARNING!
+========
+This will overwrite data on /dev/sdd1 irrevocably.
+Are you sure? (Type 'yes' in capital letters): YES
+Enter passphrase for /dev/sdd1: 
+Verify passphrase: 
+Key slot 0 created.
+Command successful.
+KhakimovRafael@debian:~$ sudo cryptsetup luksOpen /dev/sdd1 disk
+Enter passphrase for /dev/sdd1: 
+KhakimovRafael@debian:~$ ls -l /dev/mapper/disk
+lrwxrwxrwx 1 root root 7 Dec  6 15:13 /dev/mapper/disk -> ../dm-0
+KhakimovRafael@debian:~$ sudo cryptsetup -v status disk
+/dev/mapper/disk is active.
+  type:    LUKS2
+  cipher:  aes-xts-plain64
+  keysize: 512 bits
+  key location: keyring
+  device:  /dev/sdd1
+  sector size:  512
+  offset:  32768 sectors
+  size:    169984 sectors
+  mode:    read/write
+Command successful.
+KhakimovRafael@debian:~$ sudo dd if=/dev/zero of=/dev/mapper/disk
+dd: writing to '/dev/mapper/disk': No space left on device
+169985+0 records in
+169984+0 records out
+87031808 bytes (87 MB, 83 MiB) copied, 4.42127 s, 19.7 MB/s
+KhakimovRafael@debian:~$ sudo mkfs.ext4 /dev/mapper/disk
+mke2fs 1.46.2 (28-Feb-2021)
+Creating filesystem with 84992 1k blocks and 21296 inodes
+Filesystem UUID: 1a06b3d0-2483-4b62-9d50-32d8fbc54fdf
+Superblock backups stored on blocks: 
+	8193, 24577, 40961, 57345, 73729
+Allocating group tables: done                            
+Writing inode tables: done                            
+Creating journal (4096 blocks): done
+Writing superblocks and filesystem accounting information: done 
+KhakimovRafael@debian:~$ lsblk
+NAME     MAJ:MIN RM  SIZE RO TYPE  MOUNTPOINT
+sda        8:0    0   40G  0 disk  
+├─sda1     8:1    0  512M  0 part  /boot/efi
+├─sda2     8:2    0 38.5G  0 part  /
+└─sda3     8:3    0  976M  0 part  [SWAP]
+sdb        8:16   0    5G  0 disk  
+sdc        8:32   0    5G  0 disk  
+sdd        8:48   0  100M  0 disk  
+└─sdd1     8:49   0   99M  0 part  
+  └─disk 253:0    0   83M  0 crypt 
+sr0       11:0    1 1024M  0 rom   
+KhakimovRafael@debian:~$ mkdir secretinfo
+KhakimovRafael@debian:~$ sudo mount /dev/mapper/disk secretinfo/
+KhakimovRafael@debian:~$ ls secretinfo/
+lost+found
+KhakimovRafael@debian:~$ sudo unmkinitramfs  secretinfo/
+Usage: unmkinitramfs [-v] initramfs-file directory
+Options:
+  -v   Display verbose messages about extraction
+See unmkinitramfs(8) for further details.
+KhakimovRafael@debian:~$ ls /dev/mapper/disk 
+/dev/mapper/disk
+KhakimovRafael@debian:~$ lsblk /dev/sdd
+NAME     MAJ:MIN RM  SIZE RO TYPE  MOUNTPOINT
+sdd        8:48   0  100M  0 disk  
+└─sdd1     8:49   0   99M  0 part  
+  └─disk 253:0    0   83M  0 crypt /home/KhakimovRafael/secretinfo
+KhakimovRafael@debian:~$ 
+
