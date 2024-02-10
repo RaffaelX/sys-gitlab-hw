@@ -23,6 +23,7 @@
 ![01_vm](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/01_vm.PNG)
 
 </details>
+
 #### 1.2 Сеть и подсети в разных зонах доступнояти для обеспечения отказоустойчивости.
 
 - linux-bastion-host (192.168.30.30 в ru-central1-c)
@@ -65,9 +66,24 @@
 
 </details>
 
+#### 1.5 Балансировщик нагрузки для распределения запросов на сайт и обеспечения безопасности
 
+<details>
+<summary> Скриншот(-ы) </summary>
 
+![02_target-group](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/02_target-group.PNG)
 
+![03_backend-group](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/03_backend-group.PNG)
+
+![Image not found: https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/04_backend-group.PNG](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/04_backend-group.PNG "Image not found: https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/04_backend-group.PNG")
+
+![05_http-router](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/05_http-router.PNG)
+
+![06_http-router](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/06_http-router.PNG)
+
+![07_20ALB](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/07_%20ALB.PNG)
+
+</details>
 
 
 
