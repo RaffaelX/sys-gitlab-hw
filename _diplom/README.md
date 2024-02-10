@@ -35,7 +35,7 @@
 <details>
 <summary> Скриншот(-ы) </summary>
 
-![08_20Network](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/08_%20Network.PNG)
+![Image not found: https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/08_%20Network.PNG](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/08_%20Network.PNG "Image not found: https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/08_%20Network.PNG")
 
 </details>
 
@@ -44,11 +44,26 @@
 <details>
 <summary> Скриншот(-ы) </summary>
 
-![08_20Network](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/08_%20Network.PNG)
+![10_20NetMap_1](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/10_%20NetMap_1.PNG)
+
+![Image not found: https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/10_%20NetMap_2.PNG](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/10_%20NetMap_2.PNG "Image not found: https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/10_%20NetMap_2.PNG")
 
 </details>
 
+#### 1.4 Группы безопасности соответствующих сервисов на входящий трафик только к нужным портам
 
+- bastion-sg (доступ открыт на 22 порт)
+- elastic-sg (доступ открыт на 22, 10050, 9200 порты)
+- kibana-sg (доступ открыт на 22, 10050, 5601 порты)
+- nginx-sg (доступ открыт на 22, 80, 10050 порты)
+- zabix-sg (доступ на 22, 8080, 10051 порты)
+
+<details>
+<summary> Скриншот(-ы) </summary>
+
+![09_20SG](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/09_%20SG.PNG)
+
+</details>
 
 
 
