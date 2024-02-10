@@ -85,5 +85,41 @@
 
 </details>
 
+### 2. Установка и настройка серверов на ВМ производилась с помощью плэйбуков  Ansible:
+
+#### 2.1 Установка и настройка производилась в Visual Studio Code через установленный на bastion host Ansible по ssh 
+
+[файл inventory.ini](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/inventory.ini)
+
+<details>
+<summary> Скриншот(-ы) </summary>
+
+![00_Bastion-host](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/00_Bastion-host.PNG)
+
+</details>
+
+
+####  Установка Elasticsearch и Kibana 
+
+[elasticsearch_playbook.yaml](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/elasticsearch_playbook.yaml) 
+
+* скачивает elasticsearch deb
+* устанавливает elasticsearch
+* корректирует конфигурационный файл
+* автоматически корректирует файл шаблона для установки filebeat (вносит пароль)
+* выводит на экран пароль пользователя и токен для подключения kibana
+
+[kibana_playbook.yaml](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/kibana_playbook.yaml)
+
+
+
+
+
+
+
+
+
+
+
 
 
