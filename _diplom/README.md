@@ -198,6 +198,8 @@
 <details>
 <summary> Скриншот(-ы) </summary>
 
-![Image not found: https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/99_Snapshot_1.PNG](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/99_Snapshot_1.PNG "Image not found: https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/99_Snapshot_1.PNG")
+![99_Snapshot_1](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/99_Snapshot_1.PNG)
+
+![99_Snapshot_2](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/99_Snapshot_2.PNG)
 
 </details>
