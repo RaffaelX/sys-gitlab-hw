@@ -89,7 +89,7 @@
 
 #### 2.1 Установка и настройка производилась в Visual Studio Code через установленный на bastion host Ansible по ssh 
 
-[файл inventory.ini](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/inventory.ini)
+**[файл inventory.ini](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/inventory.ini)**
 
 <details>
 <summary> Скриншот(-ы) </summary>
@@ -101,25 +101,60 @@
 
 ####  Установка Elasticsearch и Kibana 
 
-[elasticsearch_playbook.yaml](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/elasticsearch_playbook.yaml) 
+**[elasticsearch_playbook.yaml](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/elasticsearch_playbook.yaml), [main.yml](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/elasticsearch/tasks/main.yml)**
 
 * скачивает elasticsearch deb
 * устанавливает elasticsearch
 * корректирует конфигурационный файл
 * автоматически корректирует файл шаблона для установки filebeat (вносит пароль)
+* выводит информаци об успешности запуска сервиса
 * выводит на экран пароль пользователя и токен для подключения kibana
 
-[kibana_playbook.yaml](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/kibana_playbook.yaml)
+**[kibana_playbook.yaml](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/kibana_playbook.yaml), [main.yml](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/kibana/tasks/main.yml)**
 
+* скачивает elasticsearch
+* устанавливает kibana
+* корректирует конфигурационный файл
+* выводит информаци об успешности запуска сервиса
+* выводит на экран 6-ти значный код для подтверждения подключения к elastic  
+    Админка **[Kinbana](https://)**
+   
+<details>
+<summary> Скриншот(-ы) </summary>
 
+![28_ install_ELK](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/28_%20install_ELK.PNG)
 
+</details>
 
+#### Установка NGINX на web сервера [nginx-playbook.yaml](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/nginx-playbook.yaml), [main.yml](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/nginx/tasks/main.yml)
 
+* устанавливает nginx на ВМ linux-nginx-1, linux-nginx-2
+* устанавливает начальную страницу сайта по шаблону j2, доступ через балансировщик **[ссылка](158.160.130.31:80)**
 
+<details>
+<summary> Скриншот(-ы) </summary>
 
+![21_ install_nginx](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/21_%20install_nginx.PNG)
 
+![22_ install_nginx](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/22_%20install_nginx.PNG)
 
+![23_ install_nginx](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/23_%20install_nginx.PNG)
 
+</details>
+
+#### Установка filebeat на web сервера для сбора логов NGINX [filebeat_playbook.yaml](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/filebeat_playbook.yaml), [main.yml](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/filebeat/tasks/main.yml)
+
+* скачивает filebeat deb
+* устанавливает filebeat
+* выводит информаци об успешности запуска сервиса
+* формирует подготовленный с локального хоста конфигурационный файл из шалона j2
+
+<details>
+<summary> Скриншот(-ы) </summary>
+
+![Image not found: https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/28_%20install_filebeat.PNG](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/28_%20install_filebeat.PNG "Image not found: https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/28_%20install_filebeat.PNG")
+
+</details>
 
 
 
