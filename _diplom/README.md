@@ -117,7 +117,7 @@
 * корректирует конфигурационный файл
 * выводит информаци об успешности запуска сервиса
 * выводит на экран 6-ти значный код для подтверждения подключения к elastic  
-    Админка **[Kinbana](https://51.250.39.11:5601)**
+    Админка **[Kinbana](http://51.250.39.11:5601)**
    
 <details>
 <summary> Скриншот(-ы) </summary>
@@ -129,7 +129,7 @@
 ####  2.3 Установка NGINX на web сервера [nginx-playbook.yaml](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/nginx-playbook.yaml), [main.yml](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/nginx/tasks/main.yml)
 
 * устанавливает nginx на ВМ linux-nginx-1, linux-nginx-2
-* устанавливает начальную страницу сайта по шаблону j2, доступ через балансировщик **[ссылка](158.160.130.31:80)**
+* устанавливает начальную страницу сайта по шаблону j2, доступ через балансировщик **[ссылка](http://158.160.130.31:80)**
 
 <details>
 <summary> Скриншот(-ы) </summary>
