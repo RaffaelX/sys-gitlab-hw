@@ -117,7 +117,7 @@
 * корректирует конфигурационный файл
 * выводит информаци об успешности запуска сервиса
 * выводит на экран 6-ти значный код для подтверждения подключения к elastic  
-    Админка **[Kinbana](https://)**
+    Админка **[Kinbana](https://51.250.39.11:5601)**
    
 <details>
 <summary> Скриншот(-ы) </summary>
@@ -179,7 +179,7 @@
   - добавляет репозиторий zabbix
   - устанавливает на хост zabbix -  zabbix server, zabbix agent, mysql, nginx
   - создает базу данных, пользователя, задает пароль
-**  [Админка zabbix-server](http://51.250.33.162:8080)**
+**[Админка zabbix-server](http://51.250.38.227:8080)**
 
 <details>
 <summary> Скриншот(-ы) </summary>
@@ -205,30 +205,3 @@
 </details>
 
 ## Инфраструктура готова к эксплуатации
-________________________________________________________________________________
-
-P.S.
-Во время формирования дипломного проекта возникли трудности с репозиториями  https://artifacts.elastic.co/GPG-KEY-elasticsearch, https://artifacts.elastic.co/packages/8.x/apt и успешно инструкции выполнялись с 10 попытки, а то и больше.  Ошибка 403 forbidden. Как выяснилось это результат санкционной политики. 
-Нашел репозиторий для elastic на яндексе, но для Debian они не работали, а работали только для Ubuntu.
-На всё это ушло много времени.
-
-ответ службы поддержки:
-
-![ps1](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/ps1.PNG)
-
-![ps2](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/ps2.PNG)
-
-Поэтому я не стал применять инструкции в Ansible подобные таким как:
-
-```yaml
-- name: import the elastic apt key
-   ansible.builtin.apt_key:
-     url: https://artifacts.elastic.co/GPG-KEY-elasticsearch
-     state: present
-
-- name: add elastic repository
-    ansible.builtin.apt_repository:
-      repo: deb https://artifacts.elastic.co/packages/8.x/apt stable main
-      state: present
-```
-А просто скачал на бастион хост deb файл с репозитория яндекса https://mirror.yandex.ru/mirrors/elastic/8/
