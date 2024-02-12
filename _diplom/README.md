@@ -106,7 +106,7 @@
 * скачивает elasticsearch deb
 * устанавливает elasticsearch
 * корректирует конфигурационный файл
-* автоматически корректирует файл шаблона для установки filebeat (вносит пароль elastic в filebeat.yml.j2)
+* автоматически корректирует файл шаблона для установки filebeat (вносит пароль elastic в [filebeat.yml.j2](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/filebeat/templates/filebeat.yml.j2))
 * выводит информаци об успешности запуска сервиса
 * выводит на экран пароль пользователя и токен для подключения kibana
 
