@@ -6,7 +6,7 @@
 
 Ключевая задача — разработать отказоустойчивую инфраструктуру для сайта, включающую мониторинг, сбор логов и резервное копирование основных данных. Инфраструктура должна размещаться в Yandex Cloud и отвечать минимальным стандартам безопасности.
 
-### 1\. Для выполнения задания был написан манифест файл Terraform [main.tf](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/main.tf) для создания следующих ресурсов:
+### 1\. Для выполнения задания был написан манифест файл Terraform [main.tf](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/main.tf), котрый созает следующие ресурсы:
 
 #### 1.1 Виртуальные машины.
 
@@ -99,7 +99,7 @@
 </details>
 
 
-####  Установка Elasticsearch и Kibana 
+####  2.2 Установка Elasticsearch и Kibana 
 
 **[elasticsearch_playbook.yaml](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/elasticsearch_playbook.yaml), [main.yml](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/elasticsearch/tasks/main.yml)**
 
@@ -126,7 +126,7 @@
 
 </details>
 
-#### Установка NGINX на web сервера [nginx-playbook.yaml](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/nginx-playbook.yaml), [main.yml](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/nginx/tasks/main.yml)
+####  2.3 Установка NGINX на web сервера [nginx-playbook.yaml](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/nginx-playbook.yaml), [main.yml](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/nginx/tasks/main.yml)
 
 * устанавливает nginx на ВМ linux-nginx-1, linux-nginx-2
 * устанавливает начальную страницу сайта по шаблону j2, доступ через балансировщик **[ссылка](158.160.130.31:80)**
@@ -142,7 +142,7 @@
 
 </details>
 
-#### Установка filebeat на web сервера для сбора логов NGINX [filebeat_playbook.yaml](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/filebeat_playbook.yaml), [main.yml](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/filebeat/tasks/main.yml)
+#### 2.4 Установка filebeat на web сервера для сбора логов NGINX [filebeat_playbook.yaml](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/filebeat_playbook.yaml), [main.yml](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/filebeat/tasks/main.yml)
 
 * скачивает filebeat deb
 * устанавливает filebeat
@@ -160,7 +160,7 @@
 
 </details>
 
-#### Установка zabbix-agent на ВМ [zabbix_agent_playbook.yaml](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/zabbix_agent_playbook.yaml), [main.yml](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/zabbix_agent/tasks/main.yml)
+#### 2.5 Установка zabbix-agent на ВМ [zabbix_agent_playbook.yaml](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/zabbix_agent_playbook.yaml), [main.yml](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/zabbix_agent/tasks/main.yml)
 
   - добавляет репозиторий zabbix
   - устанавливает zabbix agent на все хосты
@@ -174,11 +174,12 @@
 
 </details>
 
-#### Установка zabbix-server [zabbix_server_playbook.yaml](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/zabbix_server_playbook.yaml), [main.yml](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/zabbix_server/tasks/main.yml)
+#### 2.6 Установка zabbix-server [zabbix_server_playbook.yaml](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/zabbix_server_playbook.yaml), [main.yml](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/zabbix_server/tasks/main.yml)
   
   - добавляет репозиторий zabbix
   - устанавливает на хост zabbix -  zabbix server, zabbix agent, mysql, nginx
   - создает базу данных, пользователя, задает пароль
+**  [Админка zabbix-server](http://51.250.33.162:8080)**
 
 <details>
 <summary> Скриншот(-ы) </summary>
@@ -191,3 +192,12 @@
 
 </details>
 
+### 3. Резервное копирование 
+#### 3.1 Для резервного копирования был написан манифест terraform  [snapshot.tf](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/snapshot.tf)
+
+<details>
+<summary> Скриншот(-ы) </summary>
+
+![99_Snapshot_1](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/99_Snapshot_1.PNG)
+
+</details>
