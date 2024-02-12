@@ -152,9 +152,42 @@
 <details>
 <summary> Скриншот(-ы) </summary>
 
-![Image not found: https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/28_%20install_filebeat.PNG](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/28_%20install_filebeat.PNG "Image not found: https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/28_%20install_filebeat.PNG")
+![28_20](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/28_%20install_filebeat.PNG)
+
+![30_kibana_discover](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/30_kibana_discover.PNG)
+
+![30_kibana_discover2](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/30_kibana_discover2.PNG)
 
 </details>
 
+#### Установка zabbix-agent на ВМ [zabbix_agent_playbook.yaml](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/zabbix_agent_playbook.yaml), [main.yml](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/zabbix_agent/tasks/main.yml)
 
+  - добавляет репозиторий zabbix
+  - устанавливает zabbix agent на все хосты
+  - вносит корректировку в файл конфигурации  
+
+
+<details>
+<summary> Скриншот(-ы) </summary>
+
+![25_install_zabbix_agent](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/25_%20install_zabbix_agent.PNG)
+
+</details>
+
+#### Установка zabbix-server [zabbix_server_playbook.yaml](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/zabbix_server_playbook.yaml), [main.yml](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/ansible/zabbix_server/tasks/main.yml)
+  
+  - добавляет репозиторий zabbix
+  - устанавливает на хост zabbix -  zabbix server, zabbix agent, mysql, nginx
+  - создает базу данных, пользователя, задает пароль
+
+<details>
+<summary> Скриншот(-ы) </summary>
+
+![24_install_zabbix_server](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/24_%20install_zabbix_server.PNG)
+
+![26_ install_zabbix_agent](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/26_%20install_zabbix_agent.PNG)
+
+![27_ install_zabbix_agent](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/27_%20install_zabbix_agent.PNG)
+
+</details>
 
