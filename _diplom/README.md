@@ -6,7 +6,7 @@
 
 Ключевая задача — разработать отказоустойчивую инфраструктуру для сайта, включающую мониторинг, сбор логов и резервное копирование основных данных. Инфраструктура должна размещаться в Yandex Cloud и отвечать минимальным стандартам безопасности.
 
-### 1\. Для выполнения задания был написан манифест файл Terraform [main.tf](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/main.tf), котрый созает следующие ресурсы:
+### 1\. Для выполнения задания был написан манифест terraform [main.tf](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/main.tf), котрый созает следующие ресурсы:
 
 #### 1.1 Виртуальные машины.
 
@@ -198,6 +198,6 @@
 <details>
 <summary> Скриншот(-ы) </summary>
 
-![99_Snapshot_1](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/99_Snapshot_1.PNG)
+![Image not found: https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/99_Snapshot_1.PNG](https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/99_Snapshot_1.PNG "Image not found: https://github.com/RaffaelX/sys-gitlab-hw/blob/main/_diplom/img/99_Snapshot_1.PNG")
 
 </details>
